@@ -1,30 +1,22 @@
 {
   "routes": [
     {
-      "route": "/",
-      "serve": "/index.html"
-    },
-    {
-      "route": "/sources.html",
-      "serve": "/sources.html"
+      "route": "/*.html",
+      "headers": {
+        "cache-control": "must-revalidate, max-age=6000"
+      }
     },
     {
       "route": "/assignments/*",
-      "serve": "/assignments/index.html"
-    },
-    {
-      "route": "/ai-inspiration-5degrees.html",
-      "serve": "/ai-inspiration-5degrees.html"
-    },
-    {
-      "route": "/prompt-engineering-talk.html",
-      "serve": "/prompt-engineering-talk.html"
-    },
-    {
-      "route": "/temperature-demo.html",
-      "serve": "/temperature-demo.html"
+      "headers": {
+        "cache-control": "must-revalidate, max-age=6000"
+      }
     }
   ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["*.html", "/assignments/*", "*.js", "*.css", "*.png", "*.jpg", "*.svg", "*.gif", "*.mp4", "*.wav"]
+  },
   "mimeTypes": {
     ".js": "text/javascript",
     ".css": "text/css",
