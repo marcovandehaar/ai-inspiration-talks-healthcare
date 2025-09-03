@@ -130,12 +130,13 @@
                     <aside class="notes">
                         <ul>
                             <li>Ik ga jullie veel vertellen, over veel onderwerpen. Maar dat is oké, ik probeer jullie hier niet veel te leren, ik probeer te inspireren! Dus ik vraag je, als je iets interessants hoort, maak een notitie. Het is aan jou om daar dieper in te duiken :)</li>
-                            <li>Dus vandaag gaan we AI vanuit 5 verschillende hoeken verkennen - vandaar "5 Degrees of AI Inspiration"</li>
-                            <li>Eerst duiken we in wat Large Language Models eigenlijk zijn - de technologie die ChatGPT en vergelijkbare tools aandrijft</li>
+                            <li>We beginnen met een verkenning van wat Large Language Models eigenlijk zijn - de technologie die ChatGPT en vergelijkbare tools aandrijft</li>
                             <li>Dan kijken we naar hoe AI onze manier van werken verandert - de tools en processen die al transformeren hoe we samenwerken</li>
                             <li>Vervolgens verkennen we AI in echte applicaties - echte voorbeelden van AI gebruikt in software en tools</li>
                             <li>We behandelen ook prompt engineering - hoe effectief communiceren met AI systemen om de beste resultaten te krijgen</li>
                             <li>En tenslotte hebben we tijd voor jullie vragen en een discussie over wat dit allemaal voor ons betekent</li>
+                            <li>2 kleine disclaimers, De sheets zijn Engels, omdat ik deze presentatie ook geef aan onze nieuwe Ijslandse collegas. Mocht er iets niet duidelijk zijn aan de sheets, vraag het even.</li>
+                            <li>Ik ga eerder tijd te kort komen, dan onderwerpen om over te praten. Dus zal ik de tijd proberen in de gaten te houden, en sommige slides overslaan. Wees gerust je hebt toegang tot alle slides straks, en mocht er nou iets tussen zitten waat je graag meer over wilt weten, laat het me weten!</li>
                         </ul>
                     </aside>
                 </section>
@@ -147,7 +148,12 @@
                     <h2>Large Language Models</h2>
                     <img src="assets/img/aihistory.jpg" alt="AI History" style="max-width: 800px; margin-top: 30px; border-radius: 15px; display: block; margin-left: auto; margin-right: auto;">
                     <aside class="notes">
-                        <p>Oké, dus AI is niet nieuw. Het bestaat al tientallen jaren zoals je hier kunt zien. Maar pas recent hebben wetenschap en technologie een kritiek punt bereikt waar we de kracht van A.I. algemeen beschikbaar konden maken voor iedereen. LLM's - Large Language Models</p>
+                        <ul>
+                            <li>Denk eens terug aan de eerste keer dat je als kind een goochelshow zag. Je was verbaasd, toch? De trucs leken onmogelijk. En als je op mij leek, wilde je weten hoe de goochelaar het deed.</li>
+                            <li>Maar hier is het punt: alleen de truc leren is niet genoeg. Echte magie gaat niet alleen over de techniek. Het gaat om presentatie, timing, het sturen van de aandacht van het publiek—hen hier laten kijken, zodat ze daar niet kijken.</li>
+                            <li>LLM's werken op dezelfde manier. Om ze echt te begrijpen, moet je achter het gordijn kijken—niet alleen naar de truc, maar naar de uitvoering die de magie tot leven brengt.</li>
+                            <li>Oké, dus AI is niet nieuw. Het bestaat al tientallen jaren zoals je hier kunt zien. Maar pas recent hebben wetenschap en technologie een kritiek punt bereikt waar we de kracht van A.I. algemeen beschikbaar konden maken voor iedereen. LLM's - Large Language Models</li>
+                        </ul>
                     </aside>
                 </section>
                 
@@ -166,7 +172,7 @@
                     <aside class="notes">
                         <p>Dus, wat is een LLM? Hoe worden ze gemaakt?</p>
                         <ul>
-                            <li>Het high-level proces van het maken van een A.I. Model is eenvoudig:
+                            <li>Het klassieke proces van het maken van een A.I. Model is eenvoudig:
                                 <ul>
                                     <li>Je hebt data nodig</li>
                                     <li>Label die data</li>
@@ -194,7 +200,7 @@
                             <li>Een LLM is een specifiek model getraind op natuurlijke taal bronnen, wat unsupervised training mogelijk maakt.</li>
                             <li>Je hoeft de data niet te labelen; labels worden afgeleid van de trainingsdata zelf.</li>
                             <li>Tekst is overal, waardoor het makkelijk is om enorme datasets te verzamelen voor training.</li>
-                            <li>Met toegang tot enorme data (zoals het hele publieke internet) en de middelen voor unsupervised training, kunnen we nu grote taalmodellen maken.</li>
+                            <li>Met toegang tot enorme data (zoals het hele publieke internet) en de middelen voor unsupervised training, kunnen we nu LLM's maken.</li>
                             <li>ChatGPT, bijvoorbeeld, is een LLM getraind op een diverse range van internet tekst.</li>
                         </ul>
                     </aside>
@@ -217,6 +223,15 @@
                             <li>Wat betekent dat? Bijvoorbeeld, als ik je vraag wat je favoriete wereldkeuken is, zou je kunnen antwoorden "Vietnamese." Als ik je een minuut later weer vraag, geef je waarschijnlijk hetzelfde antwoord. Een model echter, zou een ander antwoord kunnen geven de tweede keer, omdat zijn responses gebaseerd zijn op waarschijnlijkheid, niet zekerheid.</li>
                             <li>De aard van deze modellen is probabilistisch, niet deterministisch. Daarom is het onmogelijk om 100% voorspelbare antwoorden te garanderen. Er zijn technieken om consistentie te verbeteren, maar het is belangrijk om te begrijpen dat deze technologie fundamenteel gebaseerd is op waarschijnlijkheidsberekeningen.</li>
                             <li>Als de modellen altijd compleet willekeurig waren, zouden ze nutteloos zijn. Gelukkig zijn er parameters die je kunt aanpassen, zoals "top-p" en "temperature," om de willekeurigheid te controleren. (Demo deze instellingen.)</li>
+                            <li>DEMO: Dit wordt duidelijker als we naar een klein voorbeeld kijken. De temperatuur past de
+                                waarschijnlijkheidsverdeling aan via een wiskundige functie. Bij een lage temperatuur
+                                wordt het verschil tussen de waarschijnlijkheden van woorden groter, waardoor woorden met
+                                een hoge waarschijnlijkheid vaker gekozen worden. Bij een hoge temperatuur wordt de
+                                verdeling gelijkmatiger, waardoor ook woorden met een lagere waarschijnlijkheid meer kans
+                                krijgen om geselecteerd te worden.</li>
+                            <li>Top-P werkt als een filter of een venster. Bij een hoge waarde is het venster groot en
+                                mogen meer woorden meedoen om als volgend woord gekozen te worden. Bij een lage waarde is
+                                het venster smal en komen minder woorden in aanmerking.</li>
                         </ul>
                     </aside>
                 </section>
@@ -844,7 +859,7 @@
                     
                     <aside class="notes">
                         <ul>
-                            <li>Een ander onderwerp waar ik jullie over wil informeren is defensieve prompt engineering. Net als gewone applicaties kunnen AI-enabled applicaties gebruikt worden door beoogde gebruikers en kwaadwillende aanvallers. Alles wat gebruikt kan worden, zal ook misbruikt worden. Er zullen altijd gebruikers zijn die het proberen te exploiteren. Het prompten van een AI opent een nieuw palet van risico's.</li>
+                            <li>Een ander onderwerp waar ik jullie over wil informeren is defensieve prompt engineering. Net als gewone applicaties kunnen AI-enabled applicaties gebruikt worden door beoogde gebruikers en kwaadwillende aanvallers. Alles wat gebruikt kan worden, zal ook misbruikt worden. Er zullen altijd gebruikers zijn die het proberen te misbruiken. Het prompten van een AI opent een nieuw palet van risico's.</li>
                         </ul>
                     </aside>
                 </section>
@@ -880,7 +895,7 @@
                     <aside class="notes">
                         <ul>
                             <li>Risico's waar je bewust van moet zijn wanneer je een applicatie bouwt die de kracht van AI benut. Er zijn 3 hoofdtypen prompt aanvallen waar je je tegen wilt verdedigen:</li>
-                            <li><strong>Prompt extraction</strong> - Het extraheren van de applicatie prompt, inclusief de system prompt, ofwel om de applicatie te repliceren of te exploiteren</li>
+                            <li><strong>Prompt extraction</strong> - Het extraheren van de applicatie prompt, inclusief de system prompt, ofwel om de applicatie te repliceren of te misbruiken</li>
                             <li><strong>Jailbreaking en prompt injection</strong> - Het model slechte dingen laten doen</li>
                             <li><strong>Information extraction</strong> - Het model zijn trainingsdata of informatie gebruikt in zijn context laten onthullen</li>
                         </ul>
@@ -935,7 +950,7 @@
                     <aside class="notes">
                         <ul>
                             <li>Prompt aanvallen brengen meerdere risico's met zich mee voor applicaties; sommige zijn verwoestender dan andere. Hier zijn er slechts een paar van:</li>
-                            <li><strong>Remote code of tool uitvoering</strong> - Voor applicaties met toegang tot krachtige tools kunnen slechte actoren ongeautoriseerde code of tool uitvoering oproepen. Stel je voor dat iemand een manier vindt om je systeem een SQL query te laten uitvoeren die alle gevoelige data van je gebruikers onthult of ongeautoriseerde e-mails naar je klanten stuurt. Als een ander voorbeeld, laten we zeggen dat je AI gebruikt om je te helpen een onderzoeksexperiment uit te voeren, wat het genereren van experimentcode inhoudt en het uitvoeren van die code op je computer. Een aanvaller kan manieren vinden om het model kwaadaardige code te laten genereren om je systeem te compromitteren.</li>
+                            <li><strong>Remote code of tool uitvoering</strong> - Voor applicaties met toegang tot krachtige tools kunnen hackers ongeautoriseerde code of tools uitvoeren. Stel je voor dat je een systeem hebt waarme je middels natuurlijke taal je database kunt bevragen. Die zal op basis van jouw vraag een  SQL query genereren en die laten uitvoeren. Stel nou dat je hiermee alle gevoelige data van je gebruikers onthult of ongeautoriseerde e-mails naar je klanten stuurt. Als een ander voorbeeld, laten we zeggen dat je AI gebruikt om je te helpen een onderzoeksexperiment uit te voeren, wat het genereren van experimentcode inhoudt en het uitvoeren van die code op je computer. Een aanvaller kan manieren vinden om het model kwaadaardige code te laten genereren om je systeem te compromitteren.</li>
                             <li><strong>Data lekken</strong> - Slechte actoren kunnen privé informatie over je systeem en je gebruikers extraheren.</li>
                             <li><strong>Sociale schade</strong> - AI modellen helpen aanvallers kennis en tutorials te krijgen over gevaarlijke of criminele activiteiten, zoals het maken van wapens, belasting ontduiken, en persoonlijke informatie exfiltreren.</li>
                             <li><strong>Desinformatie</strong> - Aanvallers zouden modellen kunnen manipuleren om desinformatie uit te voeren ter ondersteuning van hun agenda.</li>
