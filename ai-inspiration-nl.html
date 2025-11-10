@@ -970,208 +970,183 @@
 
                 <!-- Hackathon Mindset -->
                 <section data-background-color="#f8f9fa" class="slide-bg">
-                    <h3>Hackathon Mindset</h3>
-                    
-                    <div class="definition-box" style="font-size: 0.9em; margin-bottom: 20px;">
-                        <p><strong>Don't let practical limitations limit your creativity!</strong></p>
-                    </div>
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; font-size: 0.75em;">
-                        <!-- What NOT to worry about -->
+                    <h3>Working with AI on Real Systems</h3>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; font-size: 0.7em;">
+                        <!-- New Considerations -->
                         <div>
-                            <h4 style="color: #d32f2f; font-size: 1.1em; margin-bottom: 12px;">🚫 Don't worry about:</h4>
-                            <ul style="font-size: 0.9em; line-height: 1.3;">
-                                <li><strong>GDPR & regulations</strong></li>
-                                <li><strong>Perfect security</strong></li>
-                                <li><strong>Scalability</strong></li>
+                            <h4 style="color: #d32f2f; font-size: 1em; margin-bottom: 8px;">⚠️ New Considerations:</h4>
+                            <ul style="font-size: 0.9em; line-height: 1.3; margin: 0;">
+                                <li><strong>Proprietary code</strong> - not all AI tools allow it</li>
+                                <li><strong>Data governance</strong> - what can AI see?</li>
+                                <li><strong>Legacy systems</strong> - AI as migration assistant</li>
+                                <li><strong>Tool integration</strong> - connecting AI to your stack</li>
                             </ul>
                         </div>
 
-                        <!-- What TO focus on -->
+                        <!-- New Opportunities -->
                         <div>
-                            <h4 style="color: #388e3c; font-size: 1.1em; margin-bottom: 12px;">✅ Focus on:</h4>
-                            <ul style="font-size: 0.9em; line-height: 1.3;">
-                                <li><strong>Does it solve a real problem?</strong></li>
-                                <li><strong>Is the idea compelling?</strong></li>
-                                <li><strong>What works, what doesn't?</strong></li>
+                            <h4 style="color: #388e3c; font-size: 1em; margin-bottom: 8px;">✨ New Opportunities:</h4>
+                            <ul style="font-size: 0.9em; line-height: 1.3; margin: 0;">
+                                <li><strong>Code modernization</strong> - AI understands old tech</li>
+                                <li><strong>Context bridges</strong> - expose systems safely to AI</li>
+                                <li><strong>Documentation automation</strong> - AI that knows your tools</li>
+                                <li><strong>Security enhancement</strong> - AI-assisted DevSecOps</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffcc02 100%); border: 2px solid #ff9800; border-radius: 8px; padding: 12px; margin-top: 20px; text-align: center;">
-                        <p style="font-weight: bold; color: #e65100; font-size: 0.9em; margin: 0;">
-                            🚀 Goal: Discover, explore, learn!
+                    <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffcc02 100%); border: 2px solid #ff9800; border-radius: 8px; padding: 10px; margin-top: 12px; text-align: center;">
+                        <p style="font-weight: bold; color: #e65100; font-size: 0.85em; margin: 0;">
+                            💡 The challenge: How do we give AI the context it needs while keeping control?
                         </p>
                     </div>
 
                     <aside class="notes">
                         <ul>
-                            <li>We hebben vandaag veel terrein bestreken - van het begrijpen hoe LLMs werken tot het implementeren ervan in applicaties en het maken van effectieve prompts.</li>
-                            <li>Laten we nu afsluiten met wat praktisch advies dat jullie kunnen meenemen naar jullie hackathon.</li>
-                            <li>Ten eerste kunnen jullie meer dan de helft van wat ik zojuist vertelde vergeten. Voor de hackathon, maak je geen zorgen over de beperkingen en de risico's.</li>
-                            <li>Je bouwt geen productiesysteem, je verkent mogelijkheden!</li>
-                            <li>AVG? Data privacy? Beveiliging? Dit zijn allemaal oplosbare problemen die je creativiteit niet zouden moeten beperken.</li>
-                            <li>Het hele punt van een hackathon is ontdekking - wat werkt, wat niet, wat zou geweldig kunnen zijn als we onbeperkte middelen hadden?</li>                                                        
-                            <li>De beste hackathon projecten komen vaak van teams die alle praktische beperkingen negeerden en zich puur richtten op "wat als we konden...?"</li>
+                            <li>Tot nu toe hebben we vooral gepraat over AI in ideale omstandigheden - experimenteren met ChatGPT, prototypes bouwen. Maar wat als je AI wilt gebruiken met echte, productie systemen?</li>
+                            <li>Dan komen er nieuwe overwegingen bij kijken. Je kunt niet zomaar al je proprietary code in een willekeurige AI tool gooien. Je moet nadenken over data governance.</li>
+                            <li><strong>Legacy systemen:</strong> Veel organisaties hebben oude code bases in verouderde talen. AI kan hier interessant zijn - moderne LLMs zijn getraind op zo veel code dat ze zelfs obscure legacy talen begrijpen en kunnen helpen met migratie.</li>
+                            <li><strong>Tool integratie:</strong> Hoe geef je AI toegang tot je Jira, je Git repos, je Confluence, zonder alles open te gooien? Dit is waar protocols zoals MCP interessant worden.</li>
+                            <li>Maar deze beperkingen openen ook nieuwe mogelijkheden. AI voor code modernization, voor security scanning, voor het automatisch documenteren van systemen.</li>
+                            <li>De uitdaging is: hoe geef je AI de context die het nodig heeft om nuttig te zijn, terwijl je controle houdt over wat het kan zien en doen?</li>
                         </ul>
                     </aside>
                 </section>
 
                 <section data-background-color="#f8f9fa" class="slide-bg">
-                    <h3>Tips for non-devs</h3>
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; font-size: 0.8em;">
-                        <!-- Prototyping Column -->
+                    <h3>The Power of Context Bridges</h3>
+
+                    <!-- MCP Concept Box -->
+                    <div style="background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border: 2px solid #3f51b5; border-radius: 10px; padding: 10px; margin-bottom: 12px; font-size: 0.7em;">
+                        <h4 style="color: #283593; font-size: 1em; margin: 0 0 5px 0;">🔌 Model Context Protocol (MCP)</h4>
+                        <p style="margin: 0; line-height: 1.3;">Think: "plugins for AI" that give it superpowers while you stay in control.</p>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; font-size: 0.7em;">
+                        <!-- Design & Prototyping -->
                         <div>
-                            <h4 style="color: #1565c0; font-size: 1.1em; margin-bottom: 15px;">🛠️ Rapid Prototyping</h4>
-                            <ul style="font-size: 0.9em; line-height: 1.4;">
-                                <li><strong><a href="https://lovable.dev" target="_blank">Lovable.dev</a></strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">AI-powered app builder - describe your app, get working code</span>
+                            <h4 style="color: #1565c0; font-size: 1em; margin-bottom: 8px;">🎨 From Design to Reality</h4>
+                            <ul style="font-size: 0.9em; line-height: 1.3; margin: 0;">
+                                <li><strong>Visual to Code</strong><br>
+                                    <span style="color: #666; font-size: 0.85em;">Design tools can now talk to AI - your mockup becomes working code</span>
                                 </li>
-                                <li><strong>Claude Artifacts</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Create interactive demos and prototypes through conversation</span>
+                                <li><strong>Conversation to Prototype</strong><br>
+                                    <span style="color: #666; font-size: 0.85em;">Describe your idea, get interactive demos without writing code</span>
                                 </li>
-                                <li><strong>Figma + AI plugins</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Design interfaces with AI assistance</span>
-                                </li>
-                                <li><strong>Bubble.io</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">No-code platform with AI integrations</span>
+                                <li><strong>AI as Developer Pair</strong><br>
+                                    <span style="color: #666; font-size: 0.85em;">Non-devs can build real applications through conversation</span>
                                 </li>
                             </ul>
                         </div>
 
-                        <!-- Research & Analysis Column -->
+                        <!-- Integration & Automation -->
                         <div>
-                            <h4 style="color: #f57c00; font-size: 1.1em; margin-bottom: 15px;">🔍 Research & Analysis</h4>
-                            <ul style="font-size: 0.9em; line-height: 1.4;">
-                                <li><strong><a href="https://notebooklm.google.com" target="_blank">NotebookLM</a></strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Research synthesis and document analysis</span>
+                            <h4 style="color: #f57c00; font-size: 1em; margin-bottom: 8px;">⚙️ Connecting the Pieces</h4>
+                            <ul style="font-size: 0.9em; line-height: 1.3; margin: 0;">
+                                <li><strong>Tool Integration</strong><br>
+                                    <span style="color: #666; font-size: 0.85em;">MCP lets AI interact with Jira, Confluence, GitHub, and more</span>
                                 </li>
-                                <li><strong>Perplexity</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Market research and competitive analysis</span>
+                                <li><strong>Knowledge Synthesis</strong><br>
+                                    <span style="color: #666; font-size: 0.85em;">AI can analyze documentation, wikis, and code repositories</span>
                                 </li>
-                                <li><strong>ChatGPT/Claude</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">User interviews, persona creation, survey analysis</span>
-                                </li>
-                                <li><strong>Notion AI</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Project documentation and planning</span>
+                                <li><strong>Automation Possibilities</strong><br>
+                                    <span style="color: #666; font-size: 0.85em;">Documentation generation, ticket creation, code analysis</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <aside class="notes">
-                        <ul>
-                            <li>Een van de grootste misvattingen over AI hackathons is dat je een programmeur moet zijn om bij te dragen. Dat is absoluut niet waar!</li>
-                            <li><strong>Prototyping:</strong> Tools zoals Lovable.dev laten je een app idee beschrijven in gewoon Nederlands en je krijgt werkende code. Claude Artifacts kan interactieve demo's maken gewoon vanuit conversatie. Je kunt gebruikersinterfaces prototypen in Figma met AI plugins.</li>
-                            <li><strong>Onderzoek & Analyse:</strong> NotebookLM is ongelooflijk voor het synthetiseren van onderzoek - upload documenten, krijg inzichten, genereer zelfs podcast-stijl discussies over je bevindingen. Gebruik Perplexity voor marktonderzoek. ChatGPT en Claude zijn uitstekend voor het analyseren van gebruikersinterviews en het creëren van persona's.</li>
-                        </ul>
-                    </aside>
-                </section>
-                <!-- Content & Presentation Tools -->
-                <section data-background-color="#f8f9fa" class="slide-bg">
-                    <h3>Content & Presentation</h3>
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 25px; font-size: 0.75em;">
-                        <!-- Visual Content Column -->
-                        <div>
-                            <h4 style="color: #7b1fa2; font-size: 1.1em; margin-bottom: 15px;">🎨 Visual Content</h4>
-                            <ul style="font-size: 0.9em; line-height: 1.4;">
-                                <li><strong>DALL-E / Midjourney</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Generate mockup visuals, icons, and concept art</span>
-                                </li>
-                                <li><strong>Figma + AI plugins</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">AI-assisted interface design and wireframing</span>
-                                </li>
-                                <li><strong>Canva AI</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Quick marketing materials and graphics</span>
-                                </li>
-                                <li><strong>Runway / Synthesia</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Demo videos and AI-generated presentations</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Written Content Column -->
-                        <div>
-                            <h4 style="color: #388e3c; font-size: 1.1em; margin-bottom: 15px;">📝 Written Content</h4>
-                            <ul style="font-size: 0.9em; line-height: 1.4;">
-                                <li><strong>ChatGPT / Claude</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Pitch decks, business cases, user stories</span>
-                                </li>
-                                <li><strong>Gamma / Beautiful.AI</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">AI-generated presentation design</span>
-                                </li>
-                                <li><strong>Jasper / Copy.ai</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Marketing copy and product descriptions</span>
-                                </li>
-                                <li><strong>Grammarly</strong><br>
-                                    <span style="color: #666; font-size: 0.85em;">Polish and improve written content</span>
-                                </li>
-                            </ul>
-                        </div>
+                    <!-- Insight Box -->
+                    <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe082 100%); border-left: 4px solid #f57c00; padding: 10px; margin-top: 12px; border-radius: 5px; font-size: 0.7em;">
+                        <p style="margin: 0; color: #e65100; font-weight: bold; line-height: 1.3;">
+                            💡 <strong>The shift:</strong> Instead of "what AI tool should I use?", think "what context does AI need to help me?"
+                        </p>
                     </div>
 
-
-                    
                     <aside class="notes">
                         <ul>
-                            <li>Dit is waar niet-technische teamleden echt uitblinken - het creëren van het verhaal en de presentatie die je hackathon project overtuigend maakt.</li>
-                            <li><strong>Visuele Content:</strong> Je kunt professioneel ogende mockups maken met DALL-E, interfaces ontwerpen in Figma met AI assistentie, demo video's genereren met Runway of Synthesia. Geen ontwerpervaring nodig!</li>
-                            <li><strong>Geschreven Content:</strong> AI tools kunnen je helpen overtuigende pitch decks te maken, user stories te schrijven, business cases te creëren. Gamma en Beautiful.AI kunnen zelfs je hele presentatie voor je ontwerpen.</li>
-                            <li>Het belangrijkste inzicht: In hackathons is de presentatie vaak belangrijker dan de technische implementatie. Een goed verteld verhaal met geweldige visuals kan winnen van een technisch perfecte maar slecht gepresenteerde oplossing.</li>
-                            <li>Onthoud: Je bouwt niet alleen een prototype, je verkoopt een visie. Deze tools helpen je die visie effectief te communiceren.</li>
+                            <li>Hier wordt het echt interessant voor iedereen, niet alleen developers. We praten over "context bridges" - manieren om AI de informatie te geven die het nodig heeft.</li>
+                            <li><strong>Model Context Protocol (MCP):</strong> Denk hieraan als "plugins voor AI". Net zoals je browser extensies heeft, kan AI nu toegang krijgen tot specifieke tools en data via MCP servers. Het verschil is dat jij bepaalt wat het kan zien en doen.</li>
+                            <li><strong>Design to Code:</strong> Dit is een game changer voor non-developers. Er zijn nu systemen waar je een design maakt in een tool zoals Figma, en AI zet dat om in werkende code. Of je beschrijft wat je wilt en krijgt een interactieve prototype.</li>
+                            <li><strong>Tool integratie:</strong> Stel je voor dat AI je Jira kan lezen en begrijpt wat er in je backlog staat. Of je Confluence documentatie kan analyseren. Of code repositories kan bekijken om migratiestrategieën voor te stellen. Dat is wat MCP mogelijk maakt.</li>
+                            <li>Het mooie is dat je geen developer hoeft te zijn om hiermee te werken. Je kunt MCP servers gebruiken om complexe automatisering te bouwen - documentatie genereren, tickets maken, analyses doen - allemaal door te praten met AI.</li>
+                            <li>De mindset shift is: niet meer denken "welke AI tool moet ik gebruiken?" maar "welke context heeft AI nodig om mij te helpen?"</li>
                         </ul>
                     </aside>
-                </section>
+                </section>                
 
                 <!-- Tips for Devs -->
                 <section data-background-color="#f8f9fa" class="slide-bg">
-                    <h3>Tips for Devs</h3>
-                    
-                    <!-- START SIMPLE Emphasis -->
-                    <div style="background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); border: 3px solid #4caf50; border-radius: 12px; padding: 15px; margin: 20px 0; text-align: center;">
-                        <h2 style="color: #2e7d32; font-size: 1.3em; margin: 0; font-weight: bold;">
-                            🎯 START SIMPLE
-                        </h2>
-                        <p style="color: #388e3c; font-size: 0.9em; margin: 5px 0 0 0; font-weight: 600;">
-                            Prompt → API → Response
+                    <h3>Giving AI Context</h3>
+
+                    <!-- Central Theme -->
+                    <div style="background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); border: 3px solid #4caf50; border-radius: 8px; padding: 8px; margin: 8px 0; text-align: center; font-size: 0.7em;">
+                        <p style="color: #2e7d32; margin: 0; font-weight: bold; line-height: 1.2;">
+                            🔓 AI understands legacy code better than most humans<br>
+                            🔌 MCP servers make AI aware of your development ecosystem
                         </p>
                     </div>
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; font-size: 0.75em;">
-                        <!-- Quick Start Column -->
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; font-size: 0.65em;">
+                        <!-- Legacy Modernization Column -->
                         <div>
-                            <h4 style="color: #1565c0; font-size: 1.1em; margin-bottom: 12px;">🚀 Quick Start Tools</h4>
-                            <ul style="font-size: 0.9em; line-height: 1.3;">
-                                <li><strong>Public or private APIs</strong></li>
-                                <li><strong>Streamlit / Gradio</strong></li>
-                                <li><strong>GitHub Copilot</strong></li>
+                            <h4 style="color: #1565c0; font-size: 1em; margin: 0 0 6px 0;">🔓 Unlocking Legacy Systems</h4>
+                            <ul style="font-size: 0.95em; line-height: 1.2; margin: 0; padding-left: 18px;">
+                                <li><strong>Understands obscure languages</strong><br>
+                                    <span style="color: #666; font-size: 0.9em;">Magic, COBOL, RPG - billions of examples</span>
+                                </li>
+                                <li><strong>Test coverage generation</strong><br>
+                                    <span style="color: #666; font-size: 0.9em;">Reads legacy code, writes test suites</span>
+                                </li>
+                                <li><strong>Migration assistance</strong><br>
+                                    <span style="color: #666; font-size: 0.9em;">Translate Magic XPA to Java/C#</span>
+                                </li>
+                                <li><strong>Documentation generation</strong><br>
+                                    <span style="color: #666; font-size: 0.9em;">Reverse-engineer undocumented systems</span>
+                                </li>
                             </ul>
                         </div>
 
-                        <!-- When Ready Column -->
+                        <!-- MCP Integration Column -->
                         <div>
-                            <h4 style="color: #f57c00; font-size: 1.1em; margin-bottom: 12px;">⚡ Further exploration</h4>
-                            <ul style="font-size: 0.9em; line-height: 1.3;">                                
-                                <li><strong>Self hosting - MLOPS</strong></li>
-                                <li><strong>Function Calling</strong></li>
-                                <li><strong>Vector DBs for RAG</strong></li>
-                                <li><strong>Protocols</strong></li>
-                                <li><strong>Agentic architectures</strong></li>
-                                 
+                            <h4 style="color: #f57c00; font-size: 1em; margin: 0 0 6px 0;">⚙️ Building MCP Servers</h4>
+                            <ul style="font-size: 0.95em; line-height: 1.2; margin: 0; padding-left: 18px;">
+                                <li><strong>Atlassian MCP</strong><br>
+                                    <span style="color: #666; font-size: 0.9em;">Reads Jira, analyzes stories, generates test plans</span>
+                                </li>
+                                <li><strong>Figma MCP</strong><br>
+                                    <span style="color: #666; font-size: 0.9em;">Convert designs to code, ensure UI consistency</span>
+                                </li>
+                                <li><strong>Playwright/Testing MCP</strong><br>
+                                    <span style="color: #666; font-size: 0.9em;">AI generates E2E tests by understanding UI flows</span>
+                                </li>
+                                <li><strong>Custom MCP servers</strong><br>
+                                    <span style="color: #666; font-size: 0.9em;">Expose APIs, databases, CI/CD pipelines to AI</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
 
-                    
+                    <!-- Value Proposition Box -->
+                    <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe082 100%); border-left: 4px solid #f57c00; padding: 8px; margin-top: 10px; border-radius: 5px; font-size: 0.65em;">
+                        <p style="margin: 0; color: #e65100; font-weight: bold; line-height: 1.2;">
+                            💡 <strong>The opportunity:</strong> Turn legacy debt into documented, tested, modernized code.
+                        </p>
+                    </div>
+
+
                     <aside class="notes">
                         <ul>
-                            <li>Voor ontwikkelaars is de sleutel om simpel te beginnen. De modellen die tot je beschikking staan zijn zo krachtig geworden, verreweg de meeste AI applicaties gebruiken alleen de kracht van prompting om te krijgen wat je nodig hebt.</li>                            
-                            <li><strong>Snelle Start:</strong> Krijg API keys van welke modelprovider je ook wilt gebruiken. Dit kan een beheerde oplossing zijn zoals Azure Foundry, AWS Bedrock of Google Cloud maar ook een publieke, door direct te linken naar de ChatGPT of Claude API's. Het is een hackathon.</li>
-                            <li>Gebruik frameworks zoals LangChain voor veelvoorkomende patronen. Streamlit en Gradio zijn geweldig voor snelle UI demo's.</li>
-                            <li><strong>Architectuur:</strong> Begin met de eenvoudigst mogelijke flow - gebruikersinvoer, API call, resultaat weergeven. JSON mode geeft je gestructureerde data. Vector databases zijn geweldig voor RAG maar niet essentieel voor elk project.</li>                            
-                            <li>Onthoud: GitHub Copilot en andere AI coding tools kunnen je ontwikkeling tijdens de hackathon aanzienlijk versnellen.</li>
+                            <li>Voor developers zijn er twee echt spannende gebieden waar AI game-changing impact kan hebben.</li>
+                            <li><strong>Legacy Code Modernization:</strong> Dit is misschien wel de meest onderschatte superpower van moderne LLMs. Ze zijn getraind op zoveel code - inclusief oude, obscure talen - dat ze legacy systemen vaak beter begrijpen dan developers die er al jaren mee werken.</li>
+                            <li><strong>Magic XPA voorbeeld:</strong> Stel je voor: je hebt een oude Magic applicatie zonder tests, zonder documentatie. AI kan die code lezen, begrijpen wat het doet, test suites genereren die edge cases dekken, en zelfs helpen met migratie naar moderne talen zoals Java. Het kan business logica identificeren en die vertalen naar nieuwe patterns.</li>
+                            <li><strong>Test coverage:</strong> Een van de grootste uitdagingen bij legacy code is dat je niet durft te refactoren zonder tests, maar het schrijven van tests is tijdrovend. AI kan comprehensive test suites genereren door de code te analyseren.</li>
+                            <li><strong>MCP Servers bouwen:</strong> Dit is waar het echt krachtig wordt. Je kunt MCP servers bouwen die je hele development ecosystem aan AI blootstellen.</li>
+                            <li><strong>Atlassian MCP:</strong> AI kan je Jira backlog lezen, user stories analyseren, technische implementatie voorstellen, zelfs test plans genereren gebaseerd op acceptatiecriteria.</li>
+                            <li><strong>Figma/Playwright:</strong> Combineer Figma MCP (AI begrijpt je designs) met Playwright MCP (AI kan E2E tests schrijven). Nu kan AI van design naar geteste implementatie gaan.</li>
+                            <li><strong>Custom servers:</strong> Bouw je eigen MCP servers. Expose je APIs, je CI/CD pipelines, je monitoring tools. Nu kan AI je hele stack begrijpen en ermee werken.</li>
+                            <li>Het mooie is dat eenmaal gebouwd, deze MCP servers voor iedereen in je organisatie beschikbaar zijn. Je bouwt een AI-aware development environment.</li>
                         </ul>
                     </aside>
                 </section>
