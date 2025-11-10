@@ -7,7 +7,7 @@ run_command: "echo 'Please run the appropriate command in a separate terminal wi
 ## Project Overview
 This is a reveal.js-based presentation repository for AI inspiration talks. It contains:
 - The core reveal.js presentation framework (v5.2.1)
-- Custom presentation files for AI-related talks (ai-inspiration-5degrees.html, prompt-engineering-talk.html, temperature-demo.html)
+- Custom presentation files for AI-related talks (ai-inspiration-nl.html, prompt-engineering-talk.html, temperature-demo.html)
 - A Next.js demo application in `demos/tuning-demo/` showcasing AI parameter tuning
 - Custom themes and styling for presentations
 
