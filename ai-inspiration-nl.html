@@ -1004,12 +1004,12 @@
 
                     <aside class="notes">
                         <ul>
-                            <li>Tot nu toe hebben we vooral gepraat over AI in ideale omstandigheden - experimenteren met ChatGPT, prototypes bouwen. Maar wat als je AI wilt gebruiken met echte, productie systemen?</li>
-                            <li>Dan komen er nieuwe overwegingen bij kijken. Je kunt niet zomaar al je proprietary code in een willekeurige AI tool gooien. Je moet nadenken over data governance.</li>
-                            <li><strong>Legacy systemen:</strong> Veel organisaties hebben oude code bases in verouderde talen. AI kan hier interessant zijn - moderne LLMs zijn getraind op zo veel code dat ze zelfs obscure legacy talen begrijpen en kunnen helpen met migratie.</li>
-                            <li><strong>Tool integratie:</strong> Hoe geef je AI toegang tot je Jira, je Git repos, je Confluence, zonder alles open te gooien? Dit is waar protocols zoals MCP interessant worden.</li>
-                            <li>Maar deze beperkingen openen ook nieuwe mogelijkheden. AI voor code modernization, voor security scanning, voor het automatisch documenteren van systemen.</li>
-                            <li>De uitdaging is: hoe geef je AI de context die het nodig heeft om nuttig te zijn, terwijl je controle houdt over wat het kan zien en doen?</li>
+                            <li>En nou gaan jullie straks zelf aan de slag.</li>
+                            <li>Jullie gaan straks een toffe hackathon doen, waarin, als ik het goed begrijp, jullie AI gaan toepassen op jullie echte software en bedrijfsprocessen.</li>
+                            <li>Dat is een mooie uitdaging! Een uitdaging waarin er veel mogelijk is, maar ook waarin je rekening moet houden met wat zaken.</li>
+                            <li>Ik hoor dat jullie onder andere bezig gaan met het unlocken van jullie legacy applicaties. Dat betekent dus dat je met productiecode bezig gaat, en dat je dus rekening mee moet houden wat je daarmee mag doen.</li>
+                            <li>Maar het brengt ook geweldige mogelijkheden! Moderniseren van legacy systemen is iets waar A.I. heel goed bij kan helpen.</li>
+                            <li>Denk aan het vernieuwen van de frontend, of het genereren van documentatie, of het verhogen van testdekking. </li>
                         </ul>
                     </aside>
                 </section>
@@ -1021,9 +1021,16 @@
                     <img src="assets/img/improveresponses.png" alt="Improve Responses" style="max-width: 800px; margin-top: 30px; border-radius: 15px; display: block; margin-left: auto; margin-right: auto;">
                     <aside class="notes">
                         <ul>
-                            <li>Dus hoe worden kosten berekend? Per Token.</li>
-                            <li>AI gebruikt compute. Dit is de capaciteit die nodig is om bewerkingen uit te voeren. Ik noemde dat de meeste populaire modellen die we tegenwoordig gebruiken next token generators zijn.</li>
-                            
+                            <li>Tot nu toe hebben we gekeken naar de modellen zelf en hoe we tuninh parameters kunnen aanpassen. We hebben gekeken naar prompting en het stellen van de juiste vragen. Maar een van de krachtigste tools is ook het verstrekken van de juiste context voor je vraag.</li>
+                            <li>Context stelt het model in staat om naar specifieke informatie te kijken die jij verstrekt om je vraag beter te beantwoorden. In plaats van alleen te vertrouwen op wat het model tijdens training heeft geleerd, kun je het real-time toegang geven tot jouw data.</li>
+                            <li>Want bedenk je goed, zonder context, heeft het model alleen toegang tot ded ata waarop hij getraind is, en wat jij meegeeft in je prompt.</li>
+                            <li>>Maar vaak wil je eigenlijk een vraag stellen waar je ook andere data voor nodig hebt. Bijvoorbeeld, als  AI toegang heeft tot je backlog, kan het niet alleen code genereren, maar ook rekening houden met je acceptatiecriteria en user stories.</li>
+                            <li>Of je architectuurdocumentatie  - AI kan technische implementaties voorstellen die consistent zijn met je architectuurkeuzes.</li>
+                            <li>Misschien wil je wel een frontend genereren op basis van jouw designs!Dan kan AI kan code genereren die perfect aansluit bij je UI/UX specificaties.</li>
+                            <li>Dit is precies waar jullie mee bezig gaan - niet alleen AI tools gebruiken, maar ze slim verbinden met jullie eigen data en systemen. Daarmee transformeer je AI van een algemene assistent naar een expert in jouw specifieke domein.</li>
+                            <li>De vraag is niet meer "wat kan AI?", maar "welke context kan ik AI geven om mij specifiek te helpen met mijn uitdagingen?"</li>
+                        </ul>
+                    </aside>
                 </section>
 
                             
@@ -1088,15 +1095,15 @@
 
                     <aside class="notes">
                         <ul>
-                            <li>Voor developers zijn er twee echt spannende gebieden waar AI game-changing impact kan hebben.</li>
-                            <li><strong>Legacy Code Modernization:</strong> Dit is misschien wel de meest onderschatte superpower van moderne LLMs. Ze zijn getraind op zoveel code - inclusief oude, obscure talen - dat ze legacy systemen vaak beter begrijpen dan developers die er al jaren mee werken.</li>
-                            <li><strong>Magic XPA voorbeeld:</strong> Stel je voor: je hebt een oude Magic applicatie zonder tests, zonder documentatie. AI kan die code lezen, begrijpen wat het doet, test suites genereren die edge cases dekken, en zelfs helpen met migratie naar moderne talen zoals Java. Het kan business logica identificeren en die vertalen naar nieuwe patterns.</li>
-                            <li><strong>Test coverage:</strong> Een van de grootste uitdagingen bij legacy code is dat je niet durft te refactoren zonder tests, maar het schrijven van tests is tijdrovend. AI kan comprehensive test suites genereren door de code te analyseren.</li>
-                            <li><strong>MCP Servers bouwen:</strong> Dit is waar het echt krachtig wordt. Je kunt MCP servers bouwen die je hele development ecosystem aan AI blootstellen.</li>
-                            <li><strong>Atlassian MCP:</strong> AI kan je Jira backlog lezen, user stories analyseren, technische implementatie voorstellen, zelfs test plans genereren gebaseerd op acceptatiecriteria.</li>
-                            <li><strong>Figma/Playwright:</strong> Combineer Figma MCP (AI begrijpt je designs) met Playwright MCP (AI kan E2E tests schrijven). Nu kan AI van design naar geteste implementatie gaan.</li>
-                            <li><strong>Custom servers:</strong> Bouw je eigen MCP servers. Expose je APIs, je CI/CD pipelines, je monitoring tools. Nu kan AI je hele stack begrijpen en ermee werken.</li>
-                            <li>Het mooie is dat eenmaal gebouwd, deze MCP servers voor iedereen in je organisatie beschikbaar zijn. Je bouwt een AI-aware development environment.</li>
+                            <li>Laten we dit iets concreter maken. De wereld heeft de enorme potentiële waarde gezien van het verstrekken van de juiste context aan AI.</li>
+                            <li>Onderzoekers bij Anthropic hebben daarom een standaard protocol ontworpen dat we kunnen gebruiken om elk soort systeem op een gestandaardiseerde manier bloot te stellen als contextbron voor AI. Dit heet het Model Context Protocol - MCP.</li>
+                            <li>Denk aan MCP als "plugins voor AI" - het geeft AI superkrachten terwijl jij de controle houdt over wat het kan zien en doen.</li>
+                            <li><strong>Atlassian MCP voorbeeld:</strong> Stel je voor - AI kan je Jira backlog lezen, user stories analyseren, en technische implementatie voorstellen. Het kan zelfs test plans genereren gebaseerd op jullie acceptatiecriteria. Geen handmatig kopiëren van requirements meer.</li>
+                            <li><strong>Figma MCP voorbeeld:</strong> AI kan je designs begrijpen en code genereren die perfect aansluit bij je UI/UX specificaties. Het kan consistentie controleren tussen designs en implementatie. Van design naar geteste code in één flow.</li>
+                            <li><strong>Legacy systemen transformeren:</strong> Dit is waar MCP echt game-changing wordt voor jullie hackathon. AI kan toegang krijgen tot je bestaande legacy codebase, documentatie, en databases. Het begrijpt niet alleen wat de oude code doet, maar kan ook voorstellen hoe het te moderniseren terwijl het rekening houdt met bestaande business logica.</li>
+                            <li><strong>Praktisch voorbeeld:</strong> Stel je hebt een oude Magic XPA applicatie. Met een MCP server kan AI die code lezen, begrijpen welke business rules er zijn, test suites genereren, en zelfs migratiepaden naar moderne talen voorstellen - allemaal contextbewust.</li>
+                            <li>Het mooie is dat eenmaal gebouwd, deze MCP servers voor iedereen in je organisatie beschikbaar zijn. Je bouwt een AI-aware development environment dat jullie specifieke systemen en processen begrijpt.</li>                            
+                            <li>Zo heb ik van John gehoord dat hij door Figma MCP te gebruiken in 10 minuten een frontend had gegenereerd op basis van een design. Al dat niet inspireert!?</li>
                         </ul>
                     </aside>
                 </section>
