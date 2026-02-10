@@ -7,7 +7,8 @@ run_command: "echo 'Please run the appropriate command in a separate terminal wi
 ## Project Overview
 This is a reveal.js-based presentation repository for AI inspiration talks. It contains:
 - The core reveal.js presentation framework (v5.2.1)
-- Custom presentation files for AI-related talks (ai-inspiration-nl.html, prompt-engineering-talk.html, temperature-demo.html)
+- Custom presentation files for AI-related talks (ai-inspiration.html, prompt-engineering-talk.html, temperature-demo.html, agentic-software-engineering.html)
+- The primary presentation is agentic-software-engineering.html (automatically served at root)
 - A Next.js demo application in `demos/tuning-demo/` showcasing AI parameter tuning
 - Custom themes and styling for presentations
 
@@ -31,7 +32,7 @@ Navigate to `demos/tuning-demo/` first:
 - Plugins are built separately and can be loaded independently
 - Live reload watches HTML, Markdown, and source files
 - Tests run in headless Chrome via Puppeteer
-- Custom Azure build task creates deployment-ready output with renamed index file
+- Custom Azure build task creates deployment-ready output with agentic-software-engineering.html renamed to index.html
 
 ## Architecture
 ### Reveal.js Framework Structure

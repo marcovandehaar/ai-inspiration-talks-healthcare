@@ -286,7 +286,7 @@ gulp.task('build-azure', gulp.series('build', async () => {
 
     // Copy all necessary files to output directory
     const filesToCopy = [
-        './ai-inspiration-nl.html',
+        './agentic-software-engineering.html',
         './sources.html',
         './assignments/**/*',
         './dist/**/*',
@@ -303,10 +303,10 @@ gulp.task('build-azure', gulp.series('build', async () => {
             .on('error', reject);
     });
 
-    // Rename ai-inspiration-nl.html to index.html
-    if (fs.existsSync(path.join(outputDir, 'ai-inspiration-nl.html'))) {
+    // Rename agentic-software-engineering.html to index.html
+    if (fs.existsSync(path.join(outputDir, 'agentic-software-engineering.html'))) {
         fs.renameSync(
-            path.join(outputDir, 'ai-inspiration-nl.html'),
+            path.join(outputDir, 'agentic-software-engineering.html'),
             path.join(outputDir, 'index.html')
         );
     }

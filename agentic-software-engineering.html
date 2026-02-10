@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Software Engineering</title>
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.2.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@5.2.1/dist/theme/white.css">
+    <link rel="stylesheet" href="css/agentic-se.css">
+</head>
+
+<body data-section="start">
+    <!-- Akkuro logo - fixed position on all slides -->
+    <div class="akkuro-logo">
+        <img src="assets/img/logo-akkuro-green.svg" alt="Akkuro">
+    </div>
+    
+    <div class="reveal">
+        <!-- Progress indicator -->
+        <div class="progress-container">
+            <div class="section-marker"></div>
+            <div class="section-name start">Start</div>
+            <div class="section-name realworld">Real World</div>
+            <div class="section-name demo">Demo</div>
+            <div class="section-name profiles">Profiles</div>
+        </div>
+
+        <div class="slides">
+            
+            <!-- ============================================
+                 SECTION 0: Title Slide
+                 ============================================ -->
+            <section class="slide-bg title-slide">
+                <!-- Decorative blobs -->
+                <div class="blob blob-top-right"></div>
+                <div class="blob blob-bottom-left"></div>
+                
+                <h1>Agentic Software Engineering</h1>
+                <p style="font-size: 1.4em; color: var(--akkuro-teal-dark); margin-top: 30px;">
+                    Let's go!
+                </p>
+                
+                <aside class="notes">
+                    <ul>
+                        <li>Welcome to the presentation on Agentic Software Engineering</li>
+                        <li>Internal session for the team</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <!-- ============================================
+                 SECTION 1: Real World (3 vertical slides)
+                 ============================================ -->
+            <section>
+                <!-- 1.1 Introduction -->
+                <section class="slide-bg">
+                    <h2>Agentic SE in the Real World</h2>
+                    
+                    <p class="mt-40">A lot has happened in a year...</p>
+                    
+                    <p class="mt-20">The concensus shifted from skepticism to cautious optimism with a noticeable pivot point somewhere in Q4 '25.</p>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>Set the stage for real-world adoption of agentic development</li>
+                            <li>This isn't theoretical - it's happening now</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+                <!-- 1.2 Quote: Jaana Dogan -->
+                <section class="slide-bg">
+                    <h3>Voices from the Field</h3>
+                    
+                    <div class="quote-card" style="max-width: 900px; margin: 30px auto;">
+                        <blockquote>
+                            "I'm not joking and this isn't funny. We have been trying to build distributed agent orchestrators at Google since last year. There are various options, not everyone is aligned, etc. I gave Claude Code a description of the problem, <strong>it generated what we built last year in an hour.</strong><br><br>
+                            If you are skeptical of coding agents, try it on a domain you are already an expert in. Build something complex from scratch where you can be the judge of the artifacts."
+                        </blockquote>
+                        <div class="author">— Jaana Dogan, Principal Engineer at Google</div>
+                    </div>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>Jaana Dogan: What took Google a year, done in an hour</li>
+                            <li>From a Principal Engineer at Google - credible source</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+                <!-- 1.3 Quote: Malte Ubl -->
+                <section class="slide-bg">
+                    <h3>Voices from the Field</h3>
+                    
+                    <div class="quote-card" style="max-width: 900px; margin: 30px auto;">
+                        <blockquote>
+                            "It's been a crazy holiday period: I built 2 major open-source projects. I started writing a book. I fixed a bunch of other things.<br><br>
+                            Opus + Claude Code now behaves like a senior software engineer whom you can just tell what to do, and it'll do it. Supervision is still needed for difficult tasks, but it is extremely responsive to feedback and then gets it right.<br><br>
+                            I don't want to be too dramatic, but y'all have to throw away your priors. <strong>The cost of software production is trending towards zero.</strong>"
+                        </blockquote>
+                        <div class="author">— Malte Ubl, CTO at Vercel</div>
+                    </div>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>Malte Ubl: Cost of software trending to zero - provocative but real</li>
+                            <li>CTO at Vercel - knows what he's talking about</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+                <!-- 1.4 Karpathy: Skeptical -->
+                <section class="slide-bg">
+                                       
+                    <div class="transformation-card skeptic" style="max-width: 1000px; margin: 30px auto;">
+                        <div class="date-label">📅 October 2025</div>
+                        <blockquote style="font-size: 0.65em; line-height: 1.5; color: #424242; border: none; margin: 0; padding: 0;">
+                            "Overall, the models are not there. I feel like the industry is making too big of a jump and is trying to pretend like this is amazing, and it's not.<br><br>
+                            <strong>It's slop.</strong><br><br>
+                            They're not coming to terms with it, and maybe they're trying to fundraise or something like that. For now, autocomplete is my sweet spot. But sometimes, for some types of code, I will go to an LLM agent."
+                        </blockquote>
+                        <p style="text-align: right; margin-top: 15px; font-size: 0.9em; color: #c62828; font-weight: bold;">— Andrej Karpathy</p>
+                    </div>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>Andrej Karpathy: Former Director of AI at Tesla, respected AI researcher</li>
+                            <li>October: "It's slop" - extremely skeptical</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+                <!-- 1.5 Karpathy: Converted -->
+                <section class="slide-bg">
+                    <h3>A Change of Mind</h3>
+                    
+                    <div class="transformation-card converted" style="max-width: 1000px; margin: 30px auto;">
+                        <div class="date-label">📅 December 2025</div>
+                        <blockquote style="font-size: 0.5em; line-height: 1.5; color: #424242; border: none; margin: 0; padding: 0;">
+                            "<strong>I've never felt this much behind as a programmer.</strong><br><br>
+                            The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse. I have a sense that I could be 10X more powerful if I just properly string together what has become available over the last ~year, and a failure to claim the boost feels decidedly like a skill issue.<br><br>
+                            Clearly some powerful alien tool was handed around, except it comes with no manual and everyone has to figure out how to hold and operate it while the resulting magnitude 9 earthquake is rocking the profession.<br><br>
+                            <strong>Roll up your sleeves to not fall behind.</strong>"
+                        </blockquote>
+                        <p style="text-align: right; margin-top: 15px; font-size: 0.9em; color: #009B7D; font-weight: bold;">— Andrej Karpathy</p>
+                    </div>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>December: "I've never felt this behind" - complete turnaround</li>
+                            <li>This transformation happened in just 2 months</li>
+                            <li>If a skeptic can relate to October Karpathy, they should pay attention to December Karpathy</li>
+                        </ul>
+                    </aside>
+                </section>
+            </section>
+
+            <!-- ============================================
+                 SECTION 2: Demo
+                 ============================================ -->
+            <section class="slide-bg">
+                <h2>Demo: A Feature in 5 Minutes</h2>
+                
+                <div class="mt-40" style="width: 100%; max-width: 900px; margin: 30px auto;">
+                    <video controls style="width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);">
+                        <source src="assets/video/featurein5minutesfull.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <aside class="notes">
+                    <ul>
+                        <li>Live demo or recorded video showing agentic development</li>
+                        <li>Building a feature from scratch using AI agents</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <!-- ============================================
+                 SECTION 3: Custom Agent Profiles (3+ vertical slides)
+                 ============================================ -->
+            <section>
+                <!-- 3.1 Process -->
+                <section class="slide-bg">
+                    <h2>Custom Agent Profiles</h2>
+                    <h3>Process: Plan → Iterate → Execute</h3>
+                    
+                    <div class="process-flow mt-40">
+                        <div class="process-step">📋 Plan</div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">🔄 Iterate Plan</div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">⚡ Execute</div>
+                    </div>
+                    
+                    <p class="text-center mt-40">The Plan == Optimized Pompt</p>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>Plan: Define the task clearly upfront</li>
+                            <li>Iterate Plan: Refine based on feedback before execution</li>
+                            <li>Execute: Let the agent work with clear guardrails</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+                <!-- 3.2 Best Practices -->
+                <section class="slide-bg">
+                    <h3>Best Practices</h3>
+                    
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4>Learn smart</h4>
+                            <p>Use architecture docs, guidelines, PR's, designs, screenshots, test reports etc. in generating agent profiles.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4>Auto-Verification</h4>
+                            <p>Let the agent iterate itself: code → verify → improve. Build in automated feedback loops.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4>Confidence Thresholds</h4>
+                            <p>Build workflow rules around iteration and confidence levels. Know when to escalate.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4>RIGHT & WRONG Examples</h4>
+                            <p><strong>Critical:</strong> Give agents examples of what's correct AND what's wrong. Context is everything.</p>
+                        </div>
+                    </div>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>Improve: Tell agents about your docs and guidelines - they'll use them!</li>
+                            <li>Built-in improvement: Make profile refinement part of your workflow</li>
+                            <li>Auto-verification: Tests, linters, type checkers = agent feedback</li>
+                            <li>Confidence: Know when the agent should stop and ask for help</li>
+                            <li>RIGHT/WRONG examples: The most underrated technique - show both!</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+                <!-- 3.2b Case Study: RhinoMocks -> Moq -->
+                <section class="slide-bg">
+                    <h3>Example: The Perfect Agent Task</h3>
+                    
+                    <div class="case-study-card mt-20" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                        <h4>Task: Rewrite Unit Tests — RhinoMocks → Moq</h4>
+                        
+                        <ul class="success-list">
+                            <li><strong>Focused scope</strong> — One framework swap, 1 trial project</li>
+                            <li><strong>Clear requirements</strong> — Compiles, tests pass</li>
+                            <li><strong>RIGHT examples</strong> — New Moq patterns to follow</li>
+                            <li><strong>WRONG examples</strong> — Old RhinoMocks patterns to replace</li>
+                            <li><strong>Auto-verify</strong> — It can Compile and Run tests = instant feedback loop</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="key-message">
+                        The agent could iterate independently: change code → run tests → fix failures → repeat
+                    </div>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>Real example from our codebase</li>
+                            <li>Perfect task because scope is bounded and verification is built-in</li>
+                            <li>RIGHT examples: Show the new Moq syntax you want</li>
+                            <li>WRONG examples: Show the old RhinoMocks patterns to avoid</li>
+                            <li>Tests provide automatic feedback - agent knows when it's done</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+                <!-- 3.3 Cost Considerations -->
+                <section class="slide-bg">
+                    <h3>Cost Considerations</h3>
+                    
+                    <div class="tip-card">
+                        <h4>Token Limits</h4>
+                        <p>Heavy usage will test our premium limits. Monitoring and gathering power user feedback.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>Smart Model Strategy</h4>
+                        <ul class="success-list">
+                            <li><strong>Architecture:</strong> Premium models (Claude Opus, GPT 5.2)</li>
+                            <li><strong>Implementation:</strong> Cheaper models with clear instructions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>Share Your Experience</h4>
+                        <p>Limits adjust based on learnings. Your findings help shape our approach.</p>
+                    </div>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>Token limits will be tested as adoption grows</li>
+                            <li>Monitoring usage and gathering power user feedback</li>
+                            <li>Strategy: Expensive models for architecture, cheaper for dev work</li>
+                            <li>Limits adjusted based on learnings</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+                <!-- 3.4 Copilot CLI -->
+                <section class="slide-bg">
+                    <h3>Copilot CLI</h3>
+                    
+                    <div class="tip-card">
+                        <h4>Command-Line Agents</h4>
+                        <p>Run agents from the command line, similar to Claude Code.</p>
+                    </div>
+                    
+                    <img src="assets/img/markagent.png" alt="Custom Agents & Skills" style="max-height: 300px;" />
+                    
+                    <div class="screenshot-container fragment">
+                        <img src="assets/img/cli-agent.png" alt="Copilot CLI automatically invoking a custom agent" style="max-height: 250px;" />
+                        <p style="font-size: 0.6em; margin-top: 0.5em;"><em>"I didn't ask for this agent, but okay..." 🤷</em></p>
+                    </div>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>Copilot CLI: Command-line AI assistant</li>
+                            <li>Similar to Claude Code interface</li>
+                            <li>CORRECTION: Custom agents ARE supported (since Oct 2025)</li>
+                            <li>Agents from .github/agents, {org}/.github, or ~/.copilot/agents</li>
+                            <li>Model auto-invokes relevant agents — surprise!</li>
+                            <li>/agent for explicit invocation</li>
+                        </ul>
+                    </aside>
+                </section>
+                
+                <!-- 3.5 Follow-up & Resources -->
+                <section class="slide-bg">
+                    <h3>Follow-up & Resources</h3>
+                    
+                    <div class="resources-list">
+                        <div class="resource-item">
+                            <span class="icon"><img src="assets/img/Slack-logo-only.png" alt="Slack" /></span>
+                            <span class="text"><strong>#fyndoo-github-copilot</strong> — Discussion and exchange of tips & tricks</span>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <span class="icon"><img src="assets/img/Slack-logo-only.png" alt="Slack" /></span>
+                            <span class="text"><strong>Canvas</strong> — Sources and reference materials</span>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <span class="icon"><img src="assets/img/github-mark.svg" alt="GitHub" /></span>
+                            <span class="text"><strong>Agent Profiles Repository</strong> — Shared collection of profiles</span>
+                        </div>
+                    </div>
+                    
+                    <aside class="notes">
+                        <ul>
+                            <li>Copilot CLI: Command-line AI assistant</li>
+                            <li>Cost: Token usage, API costs, ROI considerations</li>
+                            <li>Slack: Place for ongoing discussion</li>
+                            <li>Canvas: Centralized sources</li>
+                            <li>Repository: Share and reuse agent profiles</li>
+                        </ul>
+                    </aside>
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/reveal.js@5.2.1/dist/reveal.js"></script>
+    <script src="https://unpkg.com/reveal.js@5.2.1/plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js@5.2.1/plugin/markdown/markdown.js"></script>
+    <script src="https://unpkg.com/reveal.js@5.2.1/plugin/highlight/highlight.js"></script>
+    <script src="js/agentic-se.js"></script>
+</body>
+</html>
