@@ -325,14 +325,35 @@
                     
                     <div class="tip-card">
                         <h4>Command-Line Agents</h4>
-                        <p>Run agents from the command line, similar to Claude Code.</p>
+                        <p>Run agents from the command line, similar to Claude Code, with agent discovery and inline review loops.</p>
                     </div>
                     
-                    <img src="assets/img/markagent.png" alt="Custom Agents & Skills" style="max-height: 300px;" />
-                    
-                    <div class="screenshot-container fragment">
-                        <img src="assets/img/cli-agent.png" alt="Copilot CLI automatically invoking a custom agent" style="max-height: 250px;" />
-                        <p style="font-size: 0.6em; margin-top: 0.5em;"><em>"I didn't ask for this agent, but okay..." 🤷</em></p>
+                    <div class="copilot-cli-showcase">
+                        <img class="copilot-cli-reference" src="assets/img/markagent.png" alt="Custom Agents and Skills" />
+
+                        <details class="video-showcase fragment">
+                            <summary>
+                                <div class="video-preview-card">
+                                    <div class="video-preview-frame">
+                                        <img src="assets/img/cli-agent.png" alt="Copilot CLI automatically invoking a custom agent" />
+                                        <span class="video-preview-badge">Click to expand</span>
+                                    </div>
+                                    <div class="video-preview-copy">
+                                        <p class="video-preview-eyebrow">Mini preview</p>
+                                        <h4>Copilot CLI demo</h4>
+                                        <p>Use the screenshot as the teaser, then open the recording when you want the full walkthrough.</p>
+                                    </div>
+                                </div>
+                            </summary>
+
+                            <div class="video-expanded-panel">
+                                <video controls preload="metadata" poster="assets/img/cli-agent.png">
+                                    <source src="assets/video/copilot-cli.mp4" type="video/mp4">
+                                    Your browser does not support the video tag. Open <a href="assets/video/copilot-cli.mp4">the recording</a> directly.
+                                </video>
+                                <p class="video-expanded-caption"><em>"I didn't ask for this agent, but okay..."</em></p>
+                            </div>
+                        </details>
                     </div>
                     
                     <aside class="notes">
@@ -342,6 +363,7 @@
                             <li>CORRECTION: Custom agents ARE supported (since Oct 2025)</li>
                             <li>Agents from .github/agents, {org}/.github, or ~/.copilot/agents</li>
                             <li>Model auto-invokes relevant agents — surprise!</li>
+                            <li>Preview expands into the full recording for a cleaner slide</li>
                             <li>/agent for explicit invocation</li>
                         </ul>
                     </aside>

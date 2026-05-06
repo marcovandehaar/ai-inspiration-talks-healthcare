@@ -641,6 +641,150 @@ body[data-section="profiles"] .section-name.profiles {
 }
 
 /* ============================================
+   Copilot CLI Video Showcase
+   ============================================ */
+.copilot-cli-showcase {
+    max-width: 860px;
+    margin: 18px auto 0;
+}
+
+.copilot-cli-reference {
+    display: block;
+    max-height: 260px;
+    max-width: min(100%, 720px);
+    margin: 0 auto 18px;
+}
+
+.video-showcase {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.video-showcase summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.video-showcase summary::-webkit-details-marker {
+    display: none;
+}
+
+.video-preview-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.9fr);
+    gap: 18px;
+    align-items: center;
+    padding: 18px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(232, 248, 245, 0.98) 100%);
+    border: 1px solid rgba(0, 184, 148, 0.18);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.video-showcase summary:hover .video-preview-card,
+.video-showcase[open] .video-preview-card {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 42px rgba(0, 184, 148, 0.14);
+    border-color: rgba(0, 184, 148, 0.35);
+}
+
+.video-preview-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 2px solid rgba(0, 184, 148, 0.18);
+    background: #10221d;
+}
+
+.video-preview-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.video-preview-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(16, 34, 29, 0.04) 0%, rgba(16, 34, 29, 0.34) 100%);
+}
+
+.video-preview-badge {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    z-index: 1;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(16, 34, 29, 0.88);
+    color: #fff;
+    font-size: 0.55em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.video-preview-copy {
+    text-align: left;
+}
+
+.video-preview-eyebrow {
+    margin: 0 0 6px;
+    font-size: 0.56em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--akkuro-teal-dark);
+    font-weight: 700;
+}
+
+.video-preview-copy h4 {
+    margin: 0 0 8px;
+    font-size: 0.92em;
+    color: var(--text-dark);
+}
+
+.video-preview-copy p:last-child {
+    margin: 0;
+    font-size: 0.66em;
+    color: var(--text-medium);
+}
+
+.video-expanded-panel {
+    margin-top: 14px;
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 184, 148, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.video-expanded-panel video {
+    width: 100%;
+    max-width: 820px;
+    border-radius: 14px;
+    border: 2px solid rgba(0, 184, 148, 0.16);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+    background: #10221d;
+}
+
+.video-expanded-caption {
+    margin: 10px 0 0;
+    font-size: 0.62em;
+    color: var(--text-medium);
+}
+
+@media (max-width: 900px) {
+    .video-preview-card {
+        grid-template-columns: 1fr;
+    }
+
+    .video-preview-copy {
+        text-align: center;
+    }
+}
+
+/* ============================================
    Follow-up Resources
    ============================================ */
 .resources-list {
