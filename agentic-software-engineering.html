@@ -24,6 +24,8 @@
             <div class="section-name realworld">Real World</div>
             <div class="section-name demo">Demo</div>
             <div class="section-name profiles">Profiles</div>
+            <div class="section-name mcp">MCP</div>
+            <div class="section-name skills">Skills</div>
         </div>
 
         <div class="slides">
@@ -75,7 +77,7 @@
                     
                     <div class="quote-card" style="max-width: 900px; margin: 30px auto;">
                         <blockquote>
-                            "I'm not joking and this isn't funny. We have been trying to build distributed agent orchestrators at Google since last year. There are various options, not everyone is aligned, etc. I gave Claude Code a description of the problem, <strong>it generated what we built last year in an hour.</strong><br><br>
+                            "I'm not joking and this isn't funny. We have been trying to build distributed agent orchestrators at Google since last year. There are various options, not everyone is aligned, etc. I gave Github Copilot a description of the problem, <strong>it generated what we built last year in an hour.</strong><br><br>
                             If you are skeptical of coding agents, try it on a domain you are already an expert in. Build something complex from scratch where you can be the judge of the artifacts."
                         </blockquote>
                         <div class="author">— Jaana Dogan, Principal Engineer at Google</div>
@@ -96,7 +98,7 @@
                     <div class="quote-card" style="max-width: 900px; margin: 30px auto;">
                         <blockquote>
                             "It's been a crazy holiday period: I built 2 major open-source projects. I started writing a book. I fixed a bunch of other things.<br><br>
-                            Opus + Claude Code now behaves like a senior software engineer whom you can just tell what to do, and it'll do it. Supervision is still needed for difficult tasks, but it is extremely responsive to feedback and then gets it right.<br><br>
+                            Opus + Github Copilot now behaves like a senior software engineer whom you can just tell what to do, and it'll do it. Supervision is still needed for difficult tasks, but it is extremely responsive to feedback and then gets it right.<br><br>
                             I don't want to be too dramatic, but y'all have to throw away your priors. <strong>The cost of software production is trending towards zero.</strong>"
                         </blockquote>
                         <div class="author">— Malte Ubl, CTO at Vercel</div>
@@ -321,50 +323,34 @@
                 
                 <!-- 3.4 Copilot CLI -->
                 <section class="slide-bg">
-                    <h3>Copilot CLI</h3>
-                    
-                    <div class="tip-card">
-                        <h4>Command-Line Agents</h4>
-                        <p>Run agents from the command line, similar to Claude Code, with agent discovery and inline review loops.</p>
-                    </div>
-                    
-                    <div class="copilot-cli-showcase">
-                        <img class="copilot-cli-reference" src="assets/img/markagent.png" alt="Custom Agents and Skills" />
+                    <h3>Github Copilot CLI</h3>
 
-                        <details class="video-showcase fragment">
+                    <div class="cli-grid">
+                        <div class="cli-col">
+                            <img src="assets/img/markagent.png" alt="Github Copilot CLI" class="cli-img" />
+                            <p class="cli-caption">Spin up multiple agents in parallel · long-running tasks run in the background while you keep working</p>
+                        </div>
+
+                        <details class="cli-col cli-video-detail fragment">
                             <summary>
-                                <div class="video-preview-card">
-                                    <div class="video-preview-frame">
-                                        <img src="assets/img/cli-agent.png" alt="Copilot CLI automatically invoking a custom agent" />
-                                        <span class="video-preview-badge">Click to expand</span>
-                                    </div>
-                                    <div class="video-preview-copy">
-                                        <p class="video-preview-eyebrow">Mini preview</p>
-                                        <h4>Copilot CLI demo</h4>
-                                        <p>Use the screenshot as the teaser, then open the recording when you want the full walkthrough.</p>
-                                    </div>
+                                <div class="cli-thumb">
+                                    <img src="assets/img/cli.png" alt="Github Copilot CLI demo" />
+                                    <span class="cli-play-btn">▶ Watch demo</span>
                                 </div>
+                                <p class="cli-caption">Short demo — click to watch</p>
                             </summary>
-
-                            <div class="video-expanded-panel">
-                                <video controls preload="metadata" poster="assets/img/cli-agent.png">
-                                    <source src="assets/video/copilot-cli.mp4" type="video/mp4">
-                                    Your browser does not support the video tag. Open <a href="assets/video/copilot-cli.mp4">the recording</a> directly.
-                                </video>
-                                <p class="video-expanded-caption"><em>"I didn't ask for this agent, but okay..."</em></p>
-                            </div>
+                            <video controls preload="metadata" poster="assets/img/cli.png" class="cli-video">
+                                <source src="assets/video/copilot-cli.mp4" type="video/mp4">
+                                <a href="assets/video/copilot-cli.mp4">Open recording</a>
+                            </video>
                         </details>
                     </div>
-                    
+
                     <aside class="notes">
                         <ul>
-                            <li>Copilot CLI: Command-line AI assistant</li>
-                            <li>Similar to Claude Code interface</li>
-                            <li>CORRECTION: Custom agents ARE supported (since Oct 2025)</li>
-                            <li>Agents from .github/agents, {org}/.github, or ~/.copilot/agents</li>
-                            <li>Model auto-invokes relevant agents — surprise!</li>
-                            <li>Preview expands into the full recording for a cleaner slide</li>
-                            <li>/agent for explicit invocation</li>
+                            <li>Copilot CLI: run multiple agents in parallel across tasks</li>
+                            <li>Background mode: kick off a long task and keep working in another terminal</li>
+                            <li>Great for: test suites, migrations, multi-file refactors running concurrently</li>
                         </ul>
                     </aside>
                 </section>
@@ -399,6 +385,141 @@
                             <li>Repository: Share and reuse agent profiles</li>
                         </ul>
                     </aside>
+                </section>
+            </section>
+
+            <!-- ============================================
+                 SECTION 4: MCP (4 vertical slides)
+                 ============================================ -->
+            <section>
+                <!-- 4.1 MCP Overview -->
+                <section class="slide-bg">
+                    <h2>MCP — Model Context Protocol</h2>
+
+                    <div class="screenshot-container" style="border: none; max-width: 680px; margin: 10px auto 0;">
+                        <img src="assets/img/MCP.png" alt="How MCP Works" style="width: 100%; border-radius: 10px;" />
+                    </div>
+
+                    <p class="text-center" style="margin-top: 8px; font-size: 0.8em; color: var(--akkuro-teal-dark);">
+                        One standard way to expose context + tools to your AI agent
+                    </p>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>MCP = Model Context Protocol, introduced by Anthropic in late 2024</li>
+                            <li>Problem it solves: every tool had its own integration — MCP standardises this</li>
+                            <li>Left side: sources (docs, issues, databases/APIs)</li>
+                            <li>Right side: AI agent gains the ability to read, query, and act on those sources</li>
+                            <li>MCP is the bridge — one protocol, works across all supporting agents</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- 4.2 Popular MCP Servers -->
+                <section class="slide-bg">
+                    <h3>MCP Servers — Real Examples</h3>
+
+                    <div class="tips-grid mt-20">
+                        <div class="tip-card">
+                            <h4>Atlassian</h4>
+                            <p>Read Jira issues and Confluence pages — give agents your full project context</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h4>MSSQL</h4>
+                            <p>Query databases directly — agents can inspect schemas and fetch live data</p>
+                        </div>
+
+                        <div class="tip-card" style="grid-column: 1 / -1; max-width: 360px; margin: 0 auto;">
+                            <h4>Playwright</h4>
+                            <p>Control a real browser — agents can navigate, fill forms, and test UIs</p>
+                        </div>
+                    </div>
+
+                    <div class="key-message" style="margin-top: 24px;">
+                        Hundreds of community-built servers at <strong>mcp.so</strong>
+                    </div>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Atlassian: I use this to give agents context from Jira and Confluence without copy-pasting</li>
+                            <li>MSSQL: Agent can query the DB directly — great for data migrations and reporting tasks</li>
+                            <li>Playwright: The agent literally drives a browser — useful for E2E tests and UI automation</li>
+                            <li>mcp.so is the community directory — most popular tools already have an MCP server</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- 4.3 Simple Config Example -->
+                <section class="slide-bg">
+                    <h3>Simple to Configure</h3>
+
+                    <p class="text-center mt-20" style="font-size: 0.9em;">Add to your agent config:</p>
+
+                    <pre style="width: fit-content; margin: 16px auto; font-size: 0.75em;"><code class="language-json" data-trim>
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
+}
+                    </code></pre>
+
+                    <div class="key-message" style="margin-top: 24px;">
+                        That's it. Github Copilot now has a real browser.
+                    </div>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>This is the entire Playwright MCP config — one command, one arg</li>
+                            <li>npx downloads and runs the server on demand — nothing to install globally</li>
+                            <li>For Github Copilot: add this to .claude/mcp.json or use "claude mcp add"</li>
+                            <li>Other servers add env vars for credentials (API keys, connection strings) — still just JSON</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- 4.4 Build Your Own MCP Server -->
+                <section class="slide-bg">
+                    <h3>Build Your Own MCP Server</h3>
+
+                    <p class="text-center mt-20" style="font-size: 0.9em;">Any existing API can become an MCP tool — just describe it:</p>
+
+                    <div class="quote-card" style="max-width: 820px; margin: 20px auto; font-style: italic;">
+                        <blockquote>
+                            "We have a REST API at <code>/api/finance</code> with endpoints for NPV, IRR, and amortization calculations. Create an MCP server that exposes these as tools so AI agents can call them directly."
+                        </blockquote>
+                    </div>
+
+                    <div class="key-message" style="margin-top: 24px;">
+                        Agents can now call your domain logic directly — no API wrapper knowledge needed
+                    </div>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>You don't need to understand the MCP spec to build a server — just describe your API</li>
+                            <li>Github Copilot generates the server: handles tool definitions, request/response mapping, error handling</li>
+                            <li>Financial calc example: now any agent can call NPV() or IRR() as a first-class tool</li>
+                            <li>Same pattern works for internal APIs, legacy services, anything with HTTP endpoints</li>
+                            <li>Once published, every team member's agent can use it instantly</li>
+                        </ul>
+                    </aside>
+                </section>
+            </section>
+
+            <!-- ============================================
+                 SECTION 5: Skills (2 vertical slides)
+                 ============================================ -->
+            <section>
+                <section class="slide-bg">
+                    <h2>Skills</h2>
+                    <p class="mt-40">Coming soon...</p>
+                </section>
+                <section class="slide-bg">
+                    <h3>Skills — Slide 2</h3>
+                    <p class="mt-40">Coming soon...</p>
                 </section>
             </section>
 
