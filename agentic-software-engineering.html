@@ -26,6 +26,7 @@
             <div class="section-name profiles">Profiles</div>
             <div class="section-name mcp">MCP</div>
             <div class="section-name skills">Skills</div>
+            <div class="section-name context">Context</div>
         </div>
 
         <div class="slides">
@@ -355,37 +356,6 @@
                     </aside>
                 </section>
                 
-                <!-- 3.5 Follow-up & Resources -->
-                <section class="slide-bg">
-                    <h3>Follow-up & Resources</h3>
-                    
-                    <div class="resources-list">
-                        <div class="resource-item">
-                            <span class="icon"><img src="assets/img/Slack-logo-only.png" alt="Slack" /></span>
-                            <span class="text"><strong>#fyndoo-github-copilot</strong> — Discussion and exchange of tips & tricks</span>
-                        </div>
-                        
-                        <div class="resource-item">
-                            <span class="icon"><img src="assets/img/Slack-logo-only.png" alt="Slack" /></span>
-                            <span class="text"><strong>Canvas</strong> — Sources and reference materials</span>
-                        </div>
-                        
-                        <div class="resource-item">
-                            <span class="icon"><img src="assets/img/github-mark.svg" alt="GitHub" /></span>
-                            <span class="text"><strong>Agent Profiles Repository</strong> — Shared collection of profiles</span>
-                        </div>
-                    </div>
-                    
-                    <aside class="notes">
-                        <ul>
-                            <li>Copilot CLI: Command-line AI assistant</li>
-                            <li>Cost: Token usage, API costs, ROI considerations</li>
-                            <li>Slack: Place for ongoing discussion</li>
-                            <li>Canvas: Centralized sources</li>
-                            <li>Repository: Share and reuse agent profiles</li>
-                        </ul>
-                    </aside>
-                </section>
             </section>
 
             <!-- ============================================
@@ -510,16 +480,246 @@
             </section>
 
             <!-- ============================================
-                 SECTION 5: Skills (2 vertical slides)
+                 SECTION 5: Skills (3 vertical slides)
                  ============================================ -->
             <section>
+                <!-- 5.1 Skills Overview -->
                 <section class="slide-bg">
                     <h2>Skills</h2>
-                    <p class="mt-40">Coming soon...</p>
+
+                    <div class="screenshot-container" style="border: none; max-width: 680px; margin: 10px auto 0;">
+                        <img src="assets/img/skills.png" alt="How Skills Work" style="width: 100%; border-radius: 10px;" />
+                    </div>
+
+                    <p class="text-center" style="margin-top: 8px; font-size: 0.8em; color: var(--akkuro-teal-dark);">
+                        Reusable know-how, deterministic helpers, and only the context it needs
+                    </p>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Skills = slash commands that bundle instructions + domain knowledge + helper files</li>
+                            <li>Three key ideas: domain knowledge (what things mean), deterministic helpers (SQL/scripts that always run the same way), progressive disclosure (only load relevant context)</li>
+                            <li>Unlike a plain prompt, a skill can include SQL queries, markdown domain docs, and precise "when to use me" instructions</li>
+                            <li>The agent doesn't need to figure out how to query your DB — the skill already has the right SQL</li>
+                        </ul>
+                    </aside>
                 </section>
+
+                <!-- 5.2 Skill Examples -->
                 <section class="slide-bg">
-                    <h3>Skills — Slide 2</h3>
-                    <p class="mt-40">Coming soon...</p>
+                    <h3>Skills in Action</h3>
+
+                    <div class="tips-grid mt-20">
+                        <div class="tip-card">
+                            <h4>/review</h4>
+                            <p>Structured code review with project-specific guidelines, PR conventions, and known anti-patterns baked in</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <h4>/security-review</h4>
+                            <p>Audits pending branch changes for OWASP vulnerabilities, auth issues, and injection risks — scoped to your stack</p>
+                        </div>
+
+                        <div class="tip-card" style="grid-column: 1 / -1; max-width: 360px; margin: 0 auto;">
+                            <h4>/migrate-tests</h4>
+                            <p>Converts RhinoMocks → Moq with RIGHT/WRONG examples embedded and auto-runs tests to verify each file</p>
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>/review: Not just "review my code" — knows your team's conventions, what to flag, how to format feedback</li>
+                            <li>/security-review: Scoped to your stack's specific risks, not generic OWASP boilerplate</li>
+                            <li>/migrate-tests: The RhinoMocks case study from earlier — a skill wraps that whole workflow into one command</li>
+                            <li>Key point: once built, every developer on the team gets the same quality and approach, instantly</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- 5.3 Build Your Own Skill -->
+                <section class="slide-bg">
+                    <h3>Build Your Own Skill</h3>
+
+                    <p class="text-center mt-20" style="font-size: 0.85em;">Use Anthropic's official <strong>/skill-creator</strong> skill — it guides you through the whole process:</p>
+
+                    <div class="process-flow" style="margin: 16px auto; max-width: 860px; font-size: 0.8em;">
+                        <div class="process-step">✍️ Draft</div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">🧪 Test</div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">📊 Eval</div>
+                        <div class="process-arrow">→</div>
+                        <div class="process-step">🔁 Iterate</div>
+                    </div>
+
+                    <div class="quote-card" style="max-width: 820px; margin: 16px auto; font-style: italic; font-size: 0.9em;">
+                        <blockquote>
+                            "We migrate unit tests from RhinoMocks to Moq. Create a skill with instructions, RIGHT and WRONG pattern examples, and the dotnet test command to verify each file after conversion."
+                        </blockquote>
+                    </div>
+
+                    <div class="resource-item" style="justify-content: center; margin-top: 14px; font-size: 0.8em;">
+                        <span class="icon"><img src="assets/img/github-mark.svg" alt="GitHub" style="height: 20px;" /></span>
+                        <span class="text"><strong>github.com/anthropics/skills</strong></span>
+                    </div>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Don't build skills manually — use /skill-creator: it interviews you, writes a draft, runs test cases, shows eval results, and iterates</li>
+                            <li>The loop: draft → run test prompts → evaluate qualitatively + quantitatively → rewrite → repeat</li>
+                            <li>Once done, it even runs the description improver to make sure the skill triggers reliably</li>
+                            <li>Skill = institutional knowledge made executable; the team shares it via version control</li>
+                            <li>All official Anthropic skills (including /review, /security-review, skill-creator) are open source at github.com/anthropics/skills</li>
+                        </ul>
+                    </aside>
+                </section>
+            </section>
+
+            <!-- ============================================
+                 SECTION 6: Context (3 vertical slides + Resources)
+                 ============================================ -->
+            <section>
+                <!-- 6.1 Context Windows -->
+                <section class="slide-bg">
+                    <h2>Context Windows</h2>
+
+                    <div class="ctx-diagram">
+                        <!-- Full bar -->
+                        <div class="ctx-bar-wrap">
+                            <div class="ctx-bar"></div>
+                            <div class="ctx-bar-labels">
+                                <span>sharp</span>
+                                <span>...rotting</span>
+                            </div>
+                            <div class="ctx-cutoff">
+                                <div class="ctx-cutoff-line"></div>
+                                <div class="ctx-cutoff-label">1M<br>hard<br>cutoff</div>
+                            </div>
+                        </div>
+
+                        <!-- Arrow + label -->
+                        <div class="ctx-arrow-row" style="position:relative; height:48px; margin: 8px 0 4px; padding-right: 90px;">
+                            <svg style="position:absolute;top:0;left:0;width:calc(100% - 0px);height:48px;" viewBox="0 0 700 48" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M692 6 C698 6, 698 6, 698 24 C698 42, 692 42, 8 42" stroke="#b85c38" stroke-width="2" stroke-dasharray="8 5" fill="none" stroke-linecap="round"/>
+                                <polygon points="8,36 8,48 20,42" fill="#b85c38"/>
+                            </svg>
+                            <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#b85c38;font-style:italic;font-size:0.85em;white-space:nowrap;background:var(--akkuro-cream);padding:0 8px;">compact: summarize &amp; continue</span>
+                        </div>
+
+                        <!-- New (compacted) bar -->
+                        <div class="ctx-new-bar-wrap" style="margin-top: 4px;">
+                            <div class="ctx-new-bar">
+                                <div class="ctx-chip ctx-chip-summary">summary</div>
+                                <div class="ctx-chip ctx-chip-content"></div>
+                            </div>
+                            <div class="ctx-cutoff-new">
+                                <div class="ctx-cutoff-new-line"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="ctx-caption">The window is finite — when it fills, compact into a summary and keep working</p>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Context window = the "working memory" of the model for a conversation</li>
+                            <li>Early in a conversation context is sharp; as it fills older content gets less attended to ("rotting")</li>
+                            <li>Hard cutoff at 1M tokens — conversation simply stops if you hit it</li>
+                            <li>Compact: summarise the conversation history, prepend the summary, continue fresh</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- 6.2 Context: All the things -->
+                <section class="slide-bg" style="display:flex !important; flex-direction:column; justify-content:center; align-items:center; padding: 16px;">
+                    <img src="assets/img/context-allthethings.png" alt="Context window — all the things" style="max-width:100%; max-height:calc(100vh - 120px); width:auto; height:auto; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Every turn the full context window is sent to the model: message history, instructions, MCP tools, and selected skills</li>
+                            <li>No memory between calls — the model starts fresh each time with only what you send</li>
+                            <li>Skills use progressive disclosure: only relevant skill details are injected, keeping the window focused and efficient</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- 6.3 Context Health Meter -->
+                <section class="slide-bg" style="padding: 14px 30px;">
+                    <h2 style="margin-bottom: 2px;">Context Health Meter</h2>
+                    <p class="text-center" style="font-size:0.72em; margin-top:0; margin-bottom:0; white-space:nowrap;">Be aware of where you are — optimize for quality, not capacity</p>
+
+                    <div class="health-meter">
+                        <div class="health-row health-row-prime">
+                            <div class="health-range">0 – 20%</div>
+                            <div class="health-zone">PRIME ZONE</div>
+                            <div class="health-desc">Best focus, strongest reasoning, least clutter</div>
+                        </div>
+                        <div class="health-row health-row-ok">
+                            <div class="health-range">20 – 60%</div>
+                            <div class="health-zone">OK ZONE</div>
+                            <div class="health-desc">Still workable, but watch for drift and unnecessary noise</div>
+                        </div>
+                        <div class="health-row health-row-reset">
+                            <div class="health-range">60 – 95%</div>
+                            <div class="health-zone">RESET ZONE</div>
+                            <div class="health-desc">Start thinking about summarizing and clearing</div>
+                        </div>
+                        <div class="health-row health-row-danger">
+                            <div class="health-range">95%+</div>
+                            <div class="health-zone">DANGER ZONE</div>
+                            <div class="health-desc">Auto-compaction may kick in; detail loss is likely and quality may already be worse</div>
+                        </div>
+                    </div>
+
+                    <div class="key-message" style="margin-top: 10px;">
+                        Not a target to fill — a resource to protect
+                    </div>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Prime zone: fresh context = sharpest output. Start new conversations deliberately.</li>
+                            <li>OK zone: normal working range, but be conscious of what you're adding</li>
+                            <li>Reset zone: time to compact or start a fresh conversation — don't keep piling on</li>
+                            <li>Danger zone: quality degrades before you hit the wall. Auto-compaction can silently lose detail.</li>
+                            <li>Key message: treat the context window like RAM, not a scroll — curate what's in it</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- 6.4 Follow-up & Resources -->
+                <section class="slide-bg">
+                    <h2>Follow-up &amp; Resources</h2>
+
+                    <div class="resources-list mt-20">
+                        <div class="resource-item">
+                            <span class="icon"><img src="assets/img/Slack-logo-only.png" alt="Slack" /></span>
+                            <span class="text"><strong>#fyndoo-github-copilot</strong> — Discussion and exchange of tips &amp; tricks</span>
+                        </div>
+
+                        <div class="resource-item">
+                            <span class="icon"><img src="assets/img/Slack-logo-only.png" alt="Slack" /></span>
+                            <span class="text"><strong>Canvas</strong> — Sources and reference materials</span>
+                        </div>
+
+                        <div class="resource-item">
+                            <span class="icon"><img src="assets/img/github-mark.svg" alt="GitHub" /></span>
+                            <span class="text"><strong>Agent Profiles Repository</strong> — Shared collection of profiles</span>
+                        </div>
+
+                        <div class="resource-item">
+                            <span class="icon"><img src="assets/img/github-mark.svg" alt="GitHub" /></span>
+                            <span class="text"><strong>github.com/anthropics/skills</strong> — Official Anthropic skills (review, security-review, skill-creator)</span>
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Slack: Place for ongoing discussion and tips</li>
+                            <li>Canvas: Centralized sources and reference materials</li>
+                            <li>Agent Profiles Repository: Share and reuse agent profiles across the team</li>
+                            <li>anthropics/skills: Open-source skills from Anthropic — ready to install and use</li>
+                        </ul>
+                    </aside>
                 </section>
             </section>
 

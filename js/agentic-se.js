@@ -27,8 +27,8 @@ function updateProgressIndicator() {
     // Index 3: Custom Agent Profiles section
     // Index 4: MCP section
     // Index 5: Skills section
-    const sections = ['start', 'realworld', 'demo', 'profiles', 'mcp', 'skills'];
-    const currentSection = sections[Math.min(slideIndex, sections.length - 1)] || 'skills';
+    const sections = ['start', 'realworld', 'demo', 'profiles', 'mcp', 'skills', 'context'];
+    const currentSection = sections[Math.min(slideIndex, sections.length - 1)] || 'context';
     
     // Update body data attribute
     document.body.setAttribute('data-section', currentSection);
